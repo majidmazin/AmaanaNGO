@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { DM_Sans, DM_Serif_Display } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" })
@@ -43,7 +42,6 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.variable} ${dmSerif.variable}`}>
       <body className="font-sans antialiased">
         {children}
-        <Analytics />
       </body>
     </html>
   )
