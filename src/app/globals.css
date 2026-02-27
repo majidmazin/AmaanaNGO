@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-gold-50: #fdf8e8;
+  --color-brand-gold-100: #faf0c5;
+  --color-brand-gold-200: #f5e08b;
+  --color-brand-gold-300: #efd051;
+  --color-brand-gold-400: #e0b318;
+  --color-brand-gold-500: #c99e10;
+  --color-brand-gold-600: #a57d0b;
+  --color-brand-gold-700: #7e5f09;
+  --color-brand-gold-800: #5c4507;
+  --color-brand-gold-900: #3a2c05;
+
+  --color-brand-blue-50: #edf2f9;
+  --color-brand-blue-100: #d4e0f0;
+  --color-brand-blue-200: #a9c1e1;
+  --color-brand-blue-300: #7ea2d2;
+  --color-brand-blue-400: #5383c3;
+  --color-brand-blue-500: #466faa;
+  --color-brand-blue-600: #385a8a;
+  --color-brand-blue-700: #2a4369;
+  --color-brand-blue-800: #1c2d48;
+  --color-brand-blue-900: #0e1627;
+
+  --color-warm-50: #fefdfb;
+  --color-warm-100: #fdf9f3;
+  --color-warm-200: #f8f0e3;
+  --color-warm-300: #f0e2cb;
+  --color-warm-400: #e0c9a3;
+  --color-warm-500: #c4a87a;
+  --color-warm-600: #9e8460;
+  --color-warm-700: #6e5c42;
+  --color-warm-800: #3d3325;
+  --color-warm-900: #1e1912;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Amiri", ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-warm-50 text-warm-900;
+}
