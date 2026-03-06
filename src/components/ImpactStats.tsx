@@ -1,8 +1,8 @@
 const STATS = [
-  { value: "2,500+", label: "Families Helped" },
-  { value: "10,000+", label: "Kits Distributed" },
-  { value: "300+", label: "Active Volunteers" },
-  { value: "15+", label: "Drives Completed" },
+  { value: "2,000+", label: "Families Helped" },
+  { value: "₹30L+", label: "Donated" },
+  { value: "20+", label: "Volunteers" },
+  { value: "10+", label: "Drives Completed" },
 ];
 
 export default function ImpactStats() {
@@ -14,7 +14,7 @@ export default function ImpactStats() {
             Our Reach
           </p>
           <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
-            Impact So Far
+            Your Impact
           </h2>
           <div className="mx-auto mt-4 h-1 w-16 rounded bg-brand-gold-400" />
         </div>
