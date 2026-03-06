@@ -2,40 +2,40 @@ import Image from "next/image";
 
 const DRIVES = [
   {
-    image: "/images/placeholders/drive-food.jpg",
-    title: "Food Distribution Drive",
+    image: "/images/drives/2026-dates-distribution.png",
+    title: "Dates Distribution 2026",
     description:
-      "Monthly ration kits distributed to families in need across Old City, Hyderabad, ensuring no one goes hungry.",
+      "Distributed 162 kg of high-quality premium dates to to the underprivileged in our community.",
   },
   {
-    image: "/images/placeholders/drive-clothing.jpg",
-    title: "Winter Clothing Drive",
+    image: "/images/drives/2025-eid-kits.jpeg",
+    title: "Eid Kits 2025",
     description:
-      "Warm blankets, jackets, and clothing distributed to homeless individuals and low-income families during winter.",
+      "Raised ₹11,10,742.53 bringing joy and ease to 650 families on Eid-ul-Fitr, 2025.",
   },
   {
-    image: "/images/placeholders/drive-education.jpg",
-    title: "Education Support Program",
+    image: "/images/drives/2025-winter-drive.png",
+    title: "Amaana Winter Drive 2025-2026",
     description:
-      "School supplies, books, and tuition assistance provided to underprivileged children to support their education.",
+      "Delivered warmth to 234 of the Ummah including Madarsah students, orphan children and widows among others.",
   },
   {
-    image: "/images/placeholders/drive-medical.jpg",
-    title: "Medical Aid Camp",
+    image: "/images/drives/2024-eid-kits.JPG",
+    title: "Eid Kits 2024",
     description:
-      "Free health check-ups, medicines, and referral services organized in underserved neighborhoods.",
+      "Donated ₹7,00,500 worth of Eid kits to 467 families on Eid-ul-Fitr, 2024.",
   },
   {
-    image: "/images/placeholders/drive-shelter.jpg",
-    title: "Shelter Assistance",
+    image: "/images/drives/taleem-initiative.png",
+    title: "Amaana Taleem Initiative",
     description:
-      "Emergency shelter support and housing repairs for families affected by natural disasters and poverty.",
+      "Educational kits gifted to 50 orphan children thanks to one of our generous donors.",
   },
   {
-    image: "/images/placeholders/drive-water.jpg",
-    title: "Clean Water Initiative",
+    image: "/images/drives/2023-eid-kits.JPG",
+    title: "Eid Kits 2023",
     description:
-      "Installation of water purification systems and distribution of clean drinking water in water-scarce areas.",
+      "Disbursed 408 kits worth ₹1,500 to families in need on Eid-ul-Fitr, 2023.",
   },
 ];
 

@@ -8,10 +8,12 @@ export const SITE_DESCRIPTION =
   "Amaana Foundation is an Islamic charity based in Hyderabad, India, dedicated to serving underprivileged communities through zakat, sadaqah, and compassionate outreach.";
 
 export const NAV_LINKS = [
+  { label: "Initiatives", href: "#initiatives" },
   { label: "About", href: "#about" },
-  { label: "Initiative", href: "#initiative" },
+  // { label: "Initiative", href: "#initiative" },
   { label: "Impact", href: "#impact" },
-  { label: "Drives", href: "#drives" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Team", href: "#team" },
-  { label: "Contact", href: "#contact" },
+  { label: "Social Media", href: "#social-media" },
+  // { label: "Contact", href: "#contact" },
 ];

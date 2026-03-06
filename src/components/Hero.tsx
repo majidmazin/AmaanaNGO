@@ -14,9 +14,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-brand-blue-900/70 via-brand-blue-800/60 to-brand-blue-900/80" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-32 text-center sm:px-6 lg:px-8">
-        <p className="mb-4 font-serif text-lg tracking-wide text-brand-gold-300 md:text-xl">
+        {/* <p className="mb-4 font-serif text-lg tracking-wide text-brand-gold-300 md:text-xl">
           Bismillah ir-Rahman ir-Rahim
-        </p>
+        </p> */}
         <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
           {SITE_TAGLINE}
         </h1>

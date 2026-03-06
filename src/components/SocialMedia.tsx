@@ -35,7 +35,7 @@ const SOCIALS = [
 
 export default function SocialMedia() {
   return (
-    <section className="bg-brand-blue-800 py-16 md:py-24">
+    <section id="social-media" className="bg-brand-blue-800 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="font-serif text-sm font-bold uppercase tracking-widest text-brand-gold-300">

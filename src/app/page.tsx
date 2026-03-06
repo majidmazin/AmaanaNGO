@@ -16,14 +16,14 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <CurrentInitiative />
-        <ImpactStats />
         <PastInitiatives />
+        <About />
+        {/* <CurrentInitiative /> */}
+        <ImpactStats />
         <Testimonials />
         <Team />
         <SocialMedia />
-        <Contact />
+        {/* <Contact /> */}
       </main>
       <Footer />
     </>
