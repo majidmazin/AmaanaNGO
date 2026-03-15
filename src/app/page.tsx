@@ -20,7 +20,7 @@ export default function Home() {
         <PastInitiatives />
         {/* <CurrentInitiative /> */}
         <ImpactStats />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Team />
         <SocialMedia />
         {/* <Contact /> */}

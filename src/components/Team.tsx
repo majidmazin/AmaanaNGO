@@ -2,12 +2,14 @@ import { FaInstagram } from "react-icons/fa";
 import { INSTAGRAM_URL } from "@/lib/constants";
 
 const TEAM_MEMBERS = [
-  { name: "Mohammed Irfan", role: "Founder & President", initials: "MI" },
-  { name: "Ayesha Khan", role: "Vice President", initials: "AK" },
-  { name: "Syed Omer", role: "Operations Head", initials: "SO" },
-  { name: "Nazia Begum", role: "Outreach Coordinator", initials: "NB" },
-  { name: "Fahad Ali", role: "Volunteer Manager", initials: "FA" },
-  { name: "Zahra Ahmed", role: "Social Media Lead", initials: "ZA" },
+  { name: "Mohammed Mazhar Khan", role: "Founder/Managing Director", initials: "MMK" },
+  { name: "Mohammed Ather Khan", role: "Trustee & Treasurer", initials: "MAK" },
+  { name: "Syed Uqba Ali", role: "Trustee", initials: "SUA" },
+  { name: "Asma Sultana", role: "Social Media Manager, Communications Officer", initials: "AS" },
+  { name: "Mohammed Ismail Khan", role: "Web Developer/IT Specialist", initials: "MIK" },
+  { name: "SM Abdul Haseeb", role: "Web Developer/IT Specialist", initials: "AH" },
+  { name: "Mohammed Ismail Khan", role: "Chartered Accountant", initials: "MIK" },
+  { name: "Jaffar Mohammed Khan", role: "Chartered Accountant", initials: "JMK" },
 ];
 
 export default function Team() {
@@ -28,9 +30,9 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
-          {TEAM_MEMBERS.map((member) => (
-            <div key={member.name} className="text-center">
+        <div className="mt-14 flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+          {TEAM_MEMBERS.map((member, index) => (
+            <div key={index} className="w-40 flex-shrink-0 text-center">
               <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-brand-blue-500 to-brand-blue-700 text-2xl font-bold text-white shadow-lg">
                 {member.initials}
               </div>

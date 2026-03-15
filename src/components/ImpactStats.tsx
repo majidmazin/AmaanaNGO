@@ -1,8 +1,8 @@
 const STATS = [
-  { value: "2,000+", label: "Families Helped" },
-  { value: "₹30L+", label: "Donated" },
+  { value: "2,200+", label: "Families Helped" },
+  { value: "₹75L+", label: "Donated" },
   { value: "20+", label: "Volunteers" },
-  { value: "10+", label: "Drives Completed" },
+  { value: "20+", label: "Drives Organized" },
 ];
 
 export default function ImpactStats() {
