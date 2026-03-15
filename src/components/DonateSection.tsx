@@ -20,23 +20,17 @@ function CopyButton({ text, label }: { text: string; label: string }) {
   return (
     <button
       onClick={copy}
-      className="inline-flex items-center gap-1 rounded-md bg-brand-blue-50 px-2.5 py-1 text-xs font-medium text-brand-blue-600 transition-colors hover:bg-brand-blue-100"
-      aria-label={`Copy ${label}`}
+      className="inline-flex shrink-0 items-center justify-center rounded-md bg-brand-blue-50 p-1.5 text-brand-blue-600 transition-colors hover:bg-brand-blue-100"
+      aria-label={copied ? `Copied ${label}` : `Copy ${label}`}
     >
       {copied ? (
-        <>
-          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          Copied
-        </>
+        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
       ) : (
-        <>
-          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-          </svg>
-          Copy
-        </>
+        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
       )}
     </button>
   );
@@ -58,8 +52,8 @@ export default function DonateSection() {
   const upiPayUrl = `upi://pay?pa=${DONATION_UPI_ID}&pn=${encodeURIComponent(DONATION_UPI_NAME)}&cu=INR`;
 
   return (
-    <section id="donate" className="bg-warm-50 py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="donate" className="bg-warm-50 py-20 md:py-28 overflow-x-hidden">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 w-full min-w-0">
         {/* Section header */}
         <div className="mx-auto max-w-3xl text-center">
           <p className="font-serif text-sm font-bold uppercase tracking-widest text-brand-gold-400">
@@ -83,9 +77,9 @@ export default function DonateSection() {
         </div>
 
         {/* Two-column payment methods */}
-        <div className="mx-auto mt-12 grid max-w-5xl gap-10 lg:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-5xl gap-10 lg:grid-cols-2 w-full min-w-0">
           {/* UPI Payment */}
-          <div className="rounded-2xl border border-warm-200 bg-white p-6 shadow-sm md:p-8">
+          <div className="min-w-0 rounded-2xl border border-warm-200 bg-white p-6 shadow-sm md:p-8">
             <h3 className="flex items-center gap-2 text-lg font-bold text-brand-blue-700">
               <svg className="h-5 w-5 text-brand-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -95,15 +89,15 @@ export default function DonateSection() {
 
             {/* QR Code */}
             <div className="mt-6 flex justify-center">
-              <div className="rounded-2xl border-2 border-warm-200 bg-warm-50 p-3">
-                <div className="flex h-48 w-48 items-center justify-center overflow-hidden rounded-xl bg-white">
+              <div className="w-full max-w-[14rem] rounded-2xl border-2 border-warm-200 bg-warm-50 p-3">
+                <div className="relative w-full overflow-hidden rounded-xl bg-white aspect-square">
                   <img
                     src="/images/upi-qr.png"
                     alt="UPI QR Code"
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <p className="mt-2 text-center text-xs font-medium text-warm-500">
+                <p className="mt-2 text-center text-xs font-medium text-warm-500 break-words">
                   Scan with any UPI app
                 </p>
               </div>
@@ -114,8 +108,8 @@ export default function DonateSection() {
               <p className="text-xs font-medium uppercase tracking-wider text-warm-500">
                 UPI ID
               </p>
-              <div className="mt-1.5 flex items-center justify-between gap-3">
-                <code className="text-base font-semibold text-brand-blue-700">
+              <div className="mt-1.5 flex items-center justify-between gap-3 min-w-0">
+                <code className="min-w-0 break-all text-base font-semibold text-brand-blue-700">
                   {DONATION_UPI_ID}
                 </code>
                 <CopyButton text={DONATION_UPI_ID} label="UPI ID" />
@@ -160,7 +154,7 @@ export default function DonateSection() {
           </div>
 
           {/* Bank Transfer */}
-          <div className="rounded-2xl border border-warm-200 bg-white p-6 shadow-sm md:p-8">
+          <div className="min-w-0 rounded-2xl border border-warm-200 bg-white p-6 shadow-sm md:p-8">
             <h3 className="flex items-center gap-2 text-lg font-bold text-brand-blue-700">
               <svg className="h-5 w-5 text-brand-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -173,11 +167,11 @@ export default function DonateSection() {
                 {BANK_FIELDS.map((field) => (
                   <div
                     key={field.key}
-                    className="flex items-center justify-between gap-4 py-3.5 first:pt-0 last:pb-0"
+                    className="flex items-center justify-between gap-4 py-3.5 first:pt-0 last:pb-0 min-w-0"
                   >
-                    <dt className="text-sm text-warm-500">{field.label}</dt>
-                    <dd className="flex items-center gap-2 text-right">
-                      <span className="text-sm font-semibold text-brand-blue-700">
+                    <dt className="shrink-0 text-sm text-warm-500">{field.label}</dt>
+                    <dd className="flex min-w-0 items-center justify-end gap-2 text-right">
+                      <span className="min-w-0 break-all text-sm font-semibold text-brand-blue-700">
                         {DONATION_BANK[field.key]}
                       </span>
                       <CopyButton
@@ -193,7 +187,7 @@ export default function DonateSection() {
             {/* Trust note */}
             <div className="mt-6 rounded-xl bg-brand-blue-50 p-5">
               <p className="text-sm leading-relaxed text-brand-blue-700">
-                Every donation is a sacred trust (<span className="font-serif italic">amaanah</span>).
+                Every donation is a sacred trust (<span className="font-serif italic">amaana</span>).
                 We ensure your contributions reach those in need with full
                 transparency.
               </p>

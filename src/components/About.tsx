@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section id="about" className="bg-warm-50 py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="mx-auto max-w-3xl text-center">
           <p className="font-serif text-brand-gold-400 text-sm font-bold uppercase tracking-widest">

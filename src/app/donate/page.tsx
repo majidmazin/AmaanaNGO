@@ -15,7 +15,7 @@ export default function DonatePage() {
     <>
       <Navbar />
       <main className="min-h-screen bg-warm-50 pt-24 pb-16 md:pt-32 md:pb-24">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="font-serif text-sm font-bold uppercase tracking-widest text-brand-gold-400">
               Support Our Mission

@@ -10,14 +10,14 @@ export const SITE_TAGLINE = "Your Trust, Their Relief";
 export const SITE_DESCRIPTION =
   "Amaana Foundation is a bridge between those who give and those in need. Rooted in trust and compassion, we serve underprivileged communities in Hyderabad with sincerity and care.";
 
-export const DONATION_UPI_ID = "amaanafoundation@upi";
-export const DONATION_UPI_NAME = "Amaana Foundation";
+export const DONATION_UPI_ID = "MAB.037347029220157@AXISBANK";
+export const DONATION_UPI_NAME = "AMAANA FOUNDATION";
 export const DONATION_BANK = {
-  accountName: "Amaana Foundation",
-  accountNumber: "1234567890",
-  ifsc: "SBIN0001234",
-  bankName: "State Bank of India",
-  branch: "Main Branch",
+  accountName: "AMAANA FOUNDATION",
+  accountNumber: "925020008040264",
+  ifsc: "UTIB0002922",
+  bankName: "Axis Bank",
+  branch: "Mehdipatnam",
 };
 
 export type DonateMode = "page" | "modal" | "section" | "drawer";

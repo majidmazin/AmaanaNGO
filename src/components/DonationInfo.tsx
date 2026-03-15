@@ -19,23 +19,17 @@ function CopyButton({ text, label }: { text: string; label: string }) {
   return (
     <button
       onClick={copy}
-      className="inline-flex items-center gap-1 rounded-md bg-brand-blue-50 px-2.5 py-1 text-xs font-medium text-brand-blue-600 transition-colors hover:bg-brand-blue-100"
-      aria-label={`Copy ${label}`}
+      className="inline-flex items-center justify-center rounded-md bg-brand-blue-50 p-1.5 text-brand-blue-600 transition-colors hover:bg-brand-blue-100"
+      aria-label={copied ? `Copied ${label}` : `Copy ${label}`}
     >
       {copied ? (
-        <>
-          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          Copied
-        </>
+        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
       ) : (
-        <>
-          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-          </svg>
-          Copy
-        </>
+        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
       )}
     </button>
   );
@@ -49,19 +43,23 @@ const BANK_FIELDS = [
   { label: "Branch", key: "branch" as const },
 ];
 
-export default function DonationInfo() {
+export default function DonationInfo({
+  stacked = false,
+}: {
+  stacked?: boolean;
+}) {
   const upiPayUrl = `upi://pay?pa=${DONATION_UPI_ID}&pn=${encodeURIComponent(DONATION_UPI_NAME)}&cu=INR`;
 
   return (
     <div className="space-y-8">
       {/* Zakat Disclaimer */}
-      <div className="rounded-xl border border-amber-200 bg-amber-50 px-5 py-4 text-center">
+      <div className="mx-auto max-w-lg rounded-xl border border-amber-200 bg-amber-50 px-5 py-4 text-center">
         <p className="text-sm font-semibold text-amber-800">
           Please note: Zakat contributions are not accepted
         </p>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-2">
+      <div className={`grid gap-8 ${stacked ? "" : "lg:grid-cols-2"}`}>
         {/* UPI Payment */}
         <div className="space-y-6">
           <h3 className="flex items-center gap-2 text-lg font-bold text-brand-blue-700">
@@ -72,9 +70,9 @@ export default function DonationInfo() {
           </h3>
 
           {/* QR Code */}
-          <div className="flex justify-center">
+          <div className="w-full">
             <div className="rounded-2xl border-2 border-warm-200 bg-white p-3 shadow-sm">
-              <div className="flex h-52 w-52 items-center justify-center overflow-hidden rounded-xl bg-warm-50">
+              <div className="relative w-full overflow-hidden rounded-xl bg-warm-50 aspect-square">
                 <img
                   src="/images/upi-qr.png"
                   alt="UPI QR Code"
@@ -171,7 +169,7 @@ export default function DonationInfo() {
           {/* Trust note */}
           <div className="rounded-xl bg-brand-blue-50 p-5">
             <p className="text-sm leading-relaxed text-brand-blue-700">
-              Every donation is a sacred trust (<span className="font-serif italic">amaanah</span>).
+              Every donation is a sacred trust (<span className="font-serif italic">amaana</span>).
               We ensure your contributions reach those in need with full transparency.
             </p>
           </div>

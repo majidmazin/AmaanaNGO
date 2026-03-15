@@ -8,7 +8,7 @@ const STATS = [
 export default function ImpactStats() {
   return (
     <section id="impact" className="bg-brand-blue-700 py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="font-serif text-sm font-bold uppercase tracking-widest text-brand-gold-300">
             Our Reach

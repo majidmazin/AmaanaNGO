@@ -14,7 +14,7 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-brand-blue-900 py-12">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           {/* Brand */}
           <div>

@@ -3,7 +3,7 @@ import { INSTAGRAM_URL } from "@/lib/constants";
 export default function CurrentInitiative() {
   return (
     <section id="initiative" className="bg-warm-100 py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-brand-blue-600 via-brand-blue-700 to-brand-blue-800 shadow-2xl">
           <div className="grid items-center md:grid-cols-2">
             {/* Text content */}
