@@ -20,11 +20,11 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <Image
-                src="/images/Al-Amanah-Logo.svg"
+                src="/images/logo.png"
                 alt={SITE_NAME}
-                width={40}
-                height={40}
-                className="h-10 w-10"
+                width={96}
+                height={157}
+                className="h-12 w-auto"
               />
               <span className="font-serif text-xl font-bold text-white">
                 {SITE_NAME}

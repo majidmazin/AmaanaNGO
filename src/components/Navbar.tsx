@@ -27,11 +27,11 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#" className="flex shrink-0 items-center gap-2">
             <Image
-              src="/images/Al-Amanah-Logo.svg"
+              src="/images/logo.png"
               alt={SITE_NAME}
-              width={44}
-              height={44}
-              className="h-10 w-10 md:h-11 md:w-11"
+              width={96}
+              height={157}
+              className="h-12 w-auto md:h-14"
             />
             <span
               className={`font-serif text-lg font-bold tracking-wide transition-colors md:text-xl ${
