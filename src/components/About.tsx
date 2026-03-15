@@ -102,7 +102,7 @@ const VALUES = [
     ),
   },
   {
-    title: "Amanah (Trust)",
+    title: "Amaana (Trust)",
     description:
       "Every donation is a sacred trust. We maintain full accountability from collection to delivery.",
     icon: (

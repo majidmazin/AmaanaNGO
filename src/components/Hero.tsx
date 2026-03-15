@@ -23,8 +23,7 @@ export default function Hero() {
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/85 md:text-xl">
           Amaana Foundation is an Islamic charity based in Hyderabad, India,
-          uplifting underprivileged communities through zakat, sadaqah, and
-          heartfelt service.
+          uplifting underprivileged communities through sadaqah and heartfelt service.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a

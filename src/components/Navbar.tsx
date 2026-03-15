@@ -34,7 +34,7 @@ export default function Navbar() {
               className="h-12 w-auto md:h-14"
             />
             <span
-              className={`font-serif text-lg font-bold tracking-wide transition-colors md:text-xl ${
+              className={`font-sans text-lg font-bold tracking-wide transition-colors md:text-xl ${
                 scrolled ? "text-brand-blue-600" : "text-white"
               }`}
             >

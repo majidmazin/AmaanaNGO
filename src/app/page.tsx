@@ -16,8 +16,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <PastInitiatives />
         <About />
+        <PastInitiatives />
         {/* <CurrentInitiative /> */}
         <ImpactStats />
         <Testimonials />

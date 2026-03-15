@@ -11,8 +11,8 @@ export const SITE_DESCRIPTION =
   "Amaana Foundation is a bridge between those who give and those in need. Rooted in trust and compassion, we serve underprivileged communities in Hyderabad with sincerity and care.";
 
 export const NAV_LINKS = [
-  { label: "Initiatives", href: "#initiatives" },
   { label: "About", href: "#about" },
+  { label: "Initiatives", href: "#initiatives" },
   // { label: "Initiative", href: "#initiative" },
   { label: "Impact", href: "#impact" },
   { label: "Testimonials", href: "#testimonials" },

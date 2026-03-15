@@ -26,7 +26,7 @@ export default function Footer() {
                 height={157}
                 className="h-12 w-auto"
               />
-              <span className="font-serif text-xl font-bold text-white">
+              <span className="font-sans text-xl font-bold text-white">
                 {SITE_NAME}
               </span>
             </div>
