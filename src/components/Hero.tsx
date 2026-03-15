@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { FaInstagram } from "react-icons/fa";
-import { INSTAGRAM_URL, SITE_TAGLINE } from "@/lib/constants";
+import DonateButton from "./DonateButton";
+import { SITE_TAGLINE } from "@/lib/constants";
 
 export default function Hero() {
   return (
@@ -26,15 +26,12 @@ export default function Hero() {
           uplifting underprivileged communities through sadaqah and heartfelt service.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-gold-400 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition-all hover:bg-brand-gold-500 hover:shadow-xl"
-          >
-            <FaInstagram className="h-5 w-5" />
+          <DonateButton className="inline-flex items-center gap-2 rounded-full bg-brand-gold-400 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition-all hover:bg-brand-gold-500 hover:shadow-xl cursor-pointer">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
             Donate Now
-          </a>
+          </DonateButton>
           <a
             href="#about"
             className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-8 py-3.5 text-lg font-semibold text-white transition-all hover:border-white hover:bg-white/10"

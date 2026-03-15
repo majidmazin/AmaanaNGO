@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Amiri } from "next/font/google";
 import "./globals.css";
 import { SITE_NAME, SITE_DESCRIPTION } from "@/lib/constants";
+import DonateProvider from "@/components/DonateProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${amiri.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <DonateProvider>{children}</DonateProvider>
+      </body>
     </html>
   );
 }

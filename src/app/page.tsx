@@ -4,6 +4,7 @@ import About from "@/components/About";
 import CurrentInitiative from "@/components/CurrentInitiative";
 import ImpactStats from "@/components/ImpactStats";
 import PastInitiatives from "@/components/PastInitiatives";
+import DonateSection from "@/components/DonateSection";
 import Testimonials from "@/components/Testimonials";
 import Team from "@/components/Team";
 import SocialMedia from "@/components/SocialMedia";
@@ -20,6 +21,7 @@ export default function Home() {
         <PastInitiatives />
         {/* <CurrentInitiative /> */}
         <ImpactStats />
+        <DonateSection />
         {/* <Testimonials /> */}
         <Team />
         <SocialMedia />

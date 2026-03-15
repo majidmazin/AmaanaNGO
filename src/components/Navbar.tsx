@@ -2,11 +2,21 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { NAV_LINKS, INSTAGRAM_URL, SITE_NAME } from "@/lib/constants";
+import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
+import type { DonateMode } from "@/lib/constants";
+import { useDonate } from "./DonateProvider";
+
+const DONATE_MODES: { value: DonateMode; label: string }[] = [
+  { value: "page", label: "Page" },
+  { value: "modal", label: "Modal" },
+  { value: "section", label: "Section" },
+  { value: "drawer", label: "Drawer" },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { mode, setMode, openDonate } = useDonate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -55,14 +65,40 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-brand-gold-400 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all hover:bg-brand-gold-500 hover:shadow-lg"
+
+            {/* Debug mode switcher */}
+            <div className="flex items-center gap-1.5">
+              <svg
+                className={`h-3.5 w-3.5 ${scrolled ? "text-warm-400" : "text-white/50"}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <select
+                value={mode}
+                onChange={(e) => setMode(e.target.value as DonateMode)}
+                className={`cursor-pointer rounded-md border-0 bg-transparent py-0.5 pr-6 pl-1 text-xs font-medium transition-colors focus:ring-1 focus:ring-brand-gold-400 ${
+                  scrolled ? "text-warm-500" : "text-white/70"
+                }`}
+              >
+                {DONATE_MODES.map((m) => (
+                  <option key={m.value} value={m.value} className="text-warm-700">
+                    {m.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <button
+              onClick={openDonate}
+              className="rounded-full bg-brand-gold-400 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all hover:bg-brand-gold-500 hover:shadow-lg cursor-pointer"
             >
               Donate
-            </a>
+            </button>
           </div>
 
           {/* Mobile hamburger */}
@@ -105,7 +141,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         className={`overflow-hidden transition-all duration-300 md:hidden ${
-          mobileOpen ? "max-h-96 bg-white shadow-lg" : "max-h-0"
+          mobileOpen ? "max-h-[28rem] bg-white shadow-lg" : "max-h-0"
         }`}
       >
         <div className="space-y-1 px-4 pb-4 pt-2">
@@ -119,14 +155,38 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 block rounded-full bg-brand-gold-400 px-5 py-2.5 text-center text-sm font-semibold text-white shadow-md transition-all hover:bg-brand-gold-500"
+          <button
+            onClick={() => { setMobileOpen(false); openDonate(); }}
+            className="mt-2 block w-full rounded-full bg-brand-gold-400 px-5 py-2.5 text-center text-sm font-semibold text-white shadow-md transition-all hover:bg-brand-gold-500 cursor-pointer"
           >
             Donate
-          </a>
+          </button>
+
+          {/* Mobile debug switcher */}
+          <div className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-warm-100 px-3 py-2">
+            <svg
+              className="h-3.5 w-3.5 text-warm-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span className="text-xs font-medium text-warm-500">Mode:</span>
+            <select
+              value={mode}
+              onChange={(e) => setMode(e.target.value as DonateMode)}
+              className="cursor-pointer rounded-md border-0 bg-transparent py-0.5 pr-6 pl-1 text-xs font-semibold text-warm-600 focus:ring-1 focus:ring-brand-gold-400"
+            >
+              {DONATE_MODES.map((m) => (
+                <option key={m.value} value={m.value}>
+                  {m.label}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
     </nav>
