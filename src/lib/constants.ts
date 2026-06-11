@@ -25,12 +25,12 @@ export const DONATION_BANK = {
 
 
 export const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Initiatives", href: "#initiatives" },
-  // { label: "Initiative", href: "#initiative" },
-  { label: "Impact", href: "#impact" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Team", href: "#team" },
-  { label: "Social Media", href: "#social-media" },
-  // { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Initiatives", href: "/#initiatives" },
+  // { label: "Initiative", href: "/#initiative" },
+  { label: "Impact", href: "/#impact" },
+  // { label: "Testimonials", href: "/#testimonials" },
+  { label: "Team", href: "/#team" },
+  { label: "Social Media", href: "/#social-media" },
+  // { label: "Contact", href: "/#contact" },
 ];

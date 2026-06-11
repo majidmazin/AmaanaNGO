@@ -89,6 +89,18 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {SITE_NAME}. All rights
             reserved. Built with trust, for those in need.
           </p>
+          <p className="mt-2 text-xs text-brand-blue-500">
+            Icons by{" "}
+            <a
+              href="https://fontawesome.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-brand-blue-600 underline-offset-2 transition-colors hover:text-brand-gold-400"
+            >
+              Font Awesome
+            </a>{" "}
+            (CC BY 4.0). Typefaces: Inter and Amiri (SIL Open Font License).
+          </p>
         </div>
       </div>
     </footer>

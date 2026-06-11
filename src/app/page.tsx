@@ -4,7 +4,6 @@ import About from "@/components/About";
 import CurrentInitiative from "@/components/CurrentInitiative";
 import ImpactStats from "@/components/ImpactStats";
 import PastInitiatives from "@/components/PastInitiatives";
-import Testimonials from "@/components/Testimonials";
 import Team from "@/components/Team";
 import SocialMedia from "@/components/SocialMedia";
 import Contact from "@/components/Contact";

@@ -7,7 +7,8 @@ const TEAM_MEMBERS = [
   { name: "Syed Uqba Ali", role: "Trustee", initials: "SUA" },
   { name: "Asma Sultana", role: "Social Media Manager, Communications Officer", initials: "AS" },
   { name: "Mohammed Ismail Khan", role: "Web Developer/IT Specialist", initials: "MIK" },
-  { name: "SM Abdul Haseeb", role: "Web Developer/IT Specialist", initials: "AH" },
+  { name: "Mazin Mohammed Majid", role: "Web Developer/IT Specialist", initials: "MMM" },
+  { name: "Shaik Mohammed Abdul Haseeb", role: "Web Developer/IT Specialist", initials: "SAH" },
   { name: "Mohammed Ismail Khan", role: "Chartered Accountant", initials: "MIK" },
   { name: "Jaffar Mohammed Khan", role: "Chartered Accountant", initials: "JMK" },
 ];
