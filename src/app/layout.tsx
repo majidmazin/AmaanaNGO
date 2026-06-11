@@ -9,7 +9,6 @@ import {
   SITE_OG_IMAGE,
 } from "@/lib/constants";
 import { getOrganizationJsonLd } from "@/lib/structured-data";
-import DonateProvider from "@/components/DonateProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -71,7 +70,7 @@ export default function RootLayout({
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
-        <DonateProvider>{children}</DonateProvider>
+        {children}
       </body>
     </html>
   );

@@ -23,7 +23,6 @@ export const DONATION_BANK = {
   branch: "Mehdipatnam",
 };
 
-export type DonateMode = "page" | "modal" | "section" | "drawer";
 
 export const NAV_LINKS = [
   { label: "About", href: "#about" },

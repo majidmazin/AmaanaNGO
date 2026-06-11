@@ -2,15 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
-import { useDonate } from "./DonateProvider";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [overHero, setOverHero] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { openDonate } = useDonate();
 
   useEffect(() => {
     const update = () => {
@@ -32,7 +31,6 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between md:h-20">
-          {/* Logo */}
           <a href="/" className="flex shrink-0 items-center gap-2">
             <Image
               src="/images/logo.png"
@@ -50,7 +48,6 @@ export default function Navbar() {
             </span>
           </a>
 
-          {/* Desktop links */}
           <div className="hidden items-center gap-6 md:flex lg:gap-8">
             {NAV_LINKS.map((link) => (
               <a
@@ -63,16 +60,14 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-
-            <button
-              onClick={openDonate}
-              className="rounded-full bg-brand-gold-400 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all hover:bg-brand-gold-500 hover:shadow-lg cursor-pointer"
+            <Link
+              href="/donate"
+              className="rounded-full bg-brand-gold-400 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all hover:bg-brand-gold-500 hover:shadow-lg"
             >
               Donate
-            </button>
+            </Link>
           </div>
 
-          {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="flex flex-col items-center justify-center gap-1.5 md:hidden"
@@ -109,10 +104,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={`overflow-hidden transition-all duration-300 md:hidden ${
-          mobileOpen ? "max-h-[28rem] bg-white shadow-lg" : "max-h-0"
+          mobileOpen ? "max-h-96 bg-white shadow-lg" : "max-h-0"
         }`}
       >
         <div className="space-y-1 px-5 pb-4 pt-2 sm:px-4">
@@ -126,12 +120,13 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <button
-            onClick={() => { setMobileOpen(false); openDonate(); }}
-            className="mt-2 block w-full rounded-full bg-brand-gold-400 px-5 py-2.5 text-center text-sm font-semibold text-white shadow-md transition-all hover:bg-brand-gold-500 cursor-pointer"
+          <Link
+            href="/donate"
+            onClick={() => setMobileOpen(false)}
+            className="mt-2 block rounded-full bg-brand-gold-400 px-5 py-2.5 text-center text-sm font-semibold text-white shadow-md transition-all hover:bg-brand-gold-500"
           >
             Donate
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
