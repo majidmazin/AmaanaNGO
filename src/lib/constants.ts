@@ -9,6 +9,9 @@ export const SITE_NAME = "Amaana Foundation";
 export const SITE_TAGLINE = "Your Trust, Their Relief";
 export const SITE_DESCRIPTION =
   "Amaana Foundation is a bridge between those who give and those in need. Rooted in trust and compassion, we serve underprivileged communities in Hyderabad with sincerity and care.";
+/** Placeholder — replace with the production domain before launch. */
+export const SITE_URL = "https://www.amaanafoundation.org";
+export const SITE_OG_IMAGE = "/images/logo.png";
 
 export const DONATION_UPI_ID = "MAB.037347029220157@AXISBANK";
 export const DONATION_UPI_NAME = "AMAANA FOUNDATION";
