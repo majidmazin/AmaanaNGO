@@ -62,7 +62,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/donate"
-              className="rounded-full bg-brand-gold-400 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all hover:bg-brand-gold-500 hover:shadow-lg"
+              className="rounded-full bg-brand-gold-400 px-5 py-2 text-sm font-semibold text-brand-blue-900 shadow-md transition-all hover:bg-brand-gold-500 hover:shadow-lg"
             >
               Donate
             </Link>
@@ -123,7 +123,7 @@ export default function Navbar() {
           <Link
             href="/donate"
             onClick={() => setMobileOpen(false)}
-            className="mt-2 block rounded-full bg-brand-gold-400 px-5 py-2.5 text-center text-sm font-semibold text-white shadow-md transition-all hover:bg-brand-gold-500"
+            className="mt-2 block rounded-full bg-brand-gold-400 px-5 py-2.5 text-center text-sm font-semibold text-brand-blue-900 shadow-md transition-all hover:bg-brand-gold-500"
           >
             Donate
           </Link>

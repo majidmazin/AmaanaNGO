@@ -22,7 +22,7 @@ export default function ImpactStats() {
         <div className="mt-14 grid grid-cols-2 gap-8 md:grid-cols-4">
           {STATS.map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="font-serif text-4xl font-bold text-brand-gold-400 md:text-5xl">
+              <p className="font-serif text-4xl font-bold text-brand-gold-300 md:text-5xl">
                 {stat.value}
               </p>
               <p className="mt-2 text-sm font-medium tracking-wide text-brand-blue-200 md:text-base">
